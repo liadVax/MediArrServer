@@ -1,0 +1,22 @@
+# Radarr is a movie collection manager for Usenet and BitTorrent users.
+# https://hub.docker.com/r/linuxserver/radarr
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./radarr:/config
+      - /path/to/data:/data
+    ports:
+      - 7878:7878
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

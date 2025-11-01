@@ -1,0 +1,18 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Chat:
+    - WhatsApp:
+        - icon: whatsapp.png
+          href: https://web.whatsapp.com
+
+- Social:
+    - Facebook:
+        - icon: facebook.png
+          href: https://facebook.com/
+
+- Entertainment:
+    - YouTube:
+        - icon: youtube.png
+          href: https://youtube.com/

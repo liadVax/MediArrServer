@@ -1,0 +1,22 @@
+# Sonarr is a tv shows collection manager for Usenet and BitTorrent users.
+# https://hub.docker.com/r/linuxserver/sonarr
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./sonarr:/config
+      - /path/to/data:/data
+    ports:
+      - 8989:8989
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

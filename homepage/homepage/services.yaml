@@ -1,0 +1,77 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Media:
+    - Plex:
+        icon: plex.svg
+        href: http://a.b.c.d:32400
+        description: Media streaming server
+        # siteMonitor: http://plex:8096
+    - Jellyfin:
+        icon: jellyfin.svg
+        href: http://a.b.c.d:8096
+        description: Media streaming server
+        # siteMonitor: http://jellyfin:8096
+    - Immich:
+        icon: immich.svg
+        href: http://a.b.c.d:2283
+        description: Photos server
+        # siteMonitor: http://immich:2283
+- Calendar:
+    - Month:
+        widget:
+          type: calendar
+          firstDayInWeek: sunday
+          view: monthly
+          showTime: true
+- Media Management:
+    - Sonarr:
+        icon: sonarr.svg
+        href: http://a.b.c.d:8989
+        description: Tv shows manager
+        # siteMonitor: http://sonarr:8989
+    - Radarr:
+        icon: radarr.svg
+        href: http://a.b.c.d:7878
+        description: Movies manager
+        # siteMonitor: http://radarr:7878
+    - Lidarr:
+        icon: lidarr.svg
+        href: http://a.b.c.d:8686
+        description: Music manager
+        # siteMonitor: http://lidarr:8686
+    - Bazarr:
+        icon: bazarr.svg
+        href: http://a.b.c.d:6767
+        description: Subtitles manager
+        # siteMonitor: http://bazarr:6767
+    - Prowlarr:
+        icon: prowlarr.svg
+        href: http://a.b.c.d:9696
+        description: Torrent tracker manager
+        # siteMonitor: http://prowlarr:9696
+
+- Downloader:
+    - qBittorrent:
+        icon: qbittorrent.svg
+        href: http://a.b.c.d:8080
+        description: Torrent downloader
+        # siteMonitor: http://qbittorrent:8080
+    - Nzbget:
+        icon: nzbget.svg
+        href: http://a.b.c.d:6789
+        description: Usenet downloader
+        # siteMonitor: http://nzbget:6789
+
+- Utils:
+    - Dockge:
+        icon: dockge.svg
+        href: http://a.b.c.d:5001
+        description: Docker manager
+        # siteMonitor: http://dockge:5001
+    - Flaresolverr:
+        icon: flaresolverr.svg
+        href: http://a.b.c.d:8191
+        description: Bypass cloudflare and DDoS-GUARD
+        # siteMonitor: http://flaresolverr:8191

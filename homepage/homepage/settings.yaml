@@ -1,0 +1,43 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings/
+
+# Basic Site Settings
+title: Bell's
+language: en
+theme: dark
+color: neutral
+target: _self
+headerStyle: boxed
+statusStyle: "dot"
+hideVersion: true
+disableCollapse: true
+iconStyle: theme
+
+providers:
+  openweathermap: { { HOMEPAGE_VAR_WEATHER } }
+
+openweathermap:
+  latitude: 0.0
+  longitude: 0.0
+  provider: openweathermap
+
+background:
+  image: https://images.unsplash.com/photo-1687042268541-5cc60ad9d3de?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740
+  blur: md # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  saturate: 100 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 75 # 0-100
+
+layout:
+  - Calendar:
+      icon: mdi-calendar
+  - Media:
+      icon: mdi-multimedia
+  - Media Management:
+      style: row
+      columns: 2
+      icon: mdi-file-multiple
+  - Downloader:
+      icon: mdi-share-all
+  - Utils:
+      icon: mdi-tools

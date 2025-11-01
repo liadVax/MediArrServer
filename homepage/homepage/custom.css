@@ -1,0 +1,59 @@
+/* Import Poppins and Merriweather fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/*==================================
+  ROOT VARIABLES
+==================================*/
+:root {
+  /* Font families for consistent typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Merriweather', serif;
+
+  /* Consistent spacing scale */
+  --spacing-xs: 5px;
+  --spacing-sm: 8px;
+  --spacing-md: 10px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+  
+  /* Border properties for consistent styling */
+  --border-width: 2px;
+  --border-radius: .375rem;
+  --border-radius-sm: .275rem;
+
+  /* Layout measurements */
+  --logo-size: 105px;
+  
+  /* Tab-specific styling variables */
+  --tab-border-width: 2px;
+  --tab-border-radius: .375rem;
+  --tab-backdrop-filter: blur(1px);
+}
+
+/* Apply Poppins font to all text */
+* {
+    font-family: var(--font-primary) !important;
+}
+
+/*==================================
+  HEADING STYLES
+==================================*/
+/* Apply Merriweather font to the greeting */
+.information-widget-logo + .information-widget-greeting span {
+  font-family: var(--font-secondary) !important;
+  font-weight: 700 !important;
+}
+
+/* Logo size and positioning */
+.information-widget-logo img {
+  width: var(--logo-size) !important;  
+  height: var(--logo-size) !important;
+  max-width: none;   
+  max-height: none;     
+  margin-left: var(--spacing-md);
+}
+
+/* Hide footer completely */
+#footer {
+  display: none;
+}

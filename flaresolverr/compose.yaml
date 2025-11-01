@@ -1,0 +1,21 @@
+# FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.
+# https://hub.docker.com/r/flaresolverr/flaresolverr
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_HTML=${LOG_HTML:-false}
+      - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+      - TZ=${TZ}
+    ports:
+      - ${PORT:-8191}:8191
+    volumes:
+      - ./flaresolver:/config
+    restart: unless-stopped
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

@@ -1,0 +1,21 @@
+# Jellyfin is Media streaming service that allows users to organize and stream their personal media collections. Unlike Plex its free and open-source
+# https://hub.docker.com/r/linuxserver/jellyfin
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ./jellyfin:/config
+      - /path/to/data/media:/data
+    ports:
+      - 8096:8096
+    restart: unless-stopped
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

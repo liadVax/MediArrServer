@@ -1,0 +1,21 @@
+# Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+# https://hub.docker.com/r/linuxserver/bazarr
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ./bazarr:/config
+      - /path/to/data:/data
+    ports:
+      - 6767:6767
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

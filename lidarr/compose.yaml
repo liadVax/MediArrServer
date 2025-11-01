@@ -1,0 +1,22 @@
+# Lidarr is a music collection manager for Usenet and BitTorrent users.
+# https://hub.docker.com/r/linuxserver/lidarr
+services:
+  lidarr:
+    container_name: lidarr
+    image: lscr.io/linuxserver/lidarr:latest
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./lidarr:/config
+      - /path/to/data:/data
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    ports:
+      - 8686:8686
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

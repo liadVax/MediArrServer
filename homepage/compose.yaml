@@ -1,0 +1,25 @@
+# Homepage is an application dashboard
+# https://gethomepage.dev/installation/docker
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=${HOMEPAGE_ALLOWED_HOSTS}
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    ports:
+      - 3000:3000
+    volumes:
+      - ./homepage:/app/config
+      - ./homepage/icons:/app/public/icons
+      - /path/to/data:/data # For displaying disks stats
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true

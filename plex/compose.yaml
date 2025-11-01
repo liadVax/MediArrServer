@@ -1,0 +1,20 @@
+# Plex is Media streaming service that allows users to organize and stream their personal media collections.
+# https://hub.docker.com/r/linuxserver/plex
+# IMPORTANT - If Plex page doesn’t load the first time, allow Plex through firewall. sudo ufw allow 32400
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - VERSION=docker
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    ports:
+      - 32400:32400
+    volumes:
+      - ./plex:/config
+      - /path/to/data/media:/data
+    restart: unless-stopped
