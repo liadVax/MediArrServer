@@ -4,7 +4,7 @@
 
 Dockge is a lightweight web-based interface for managing Docker containers and stacks. It serves as your container manager — allowing you to deploy, monitor, and control all your services in one interface.
 
-**Dockge homepage:** [https://dockge.kuma.pet](https://dockge.kuma.pet)
+**Dockge homepage:** [Dockge](https://dockge.kuma.pet)
 
 ## Configuration
 
@@ -12,18 +12,6 @@ Dockge is a lightweight web-based interface for managing Docker containers and s
 
 - Setup `/path/to/stacks`, (I used `/home/user/home_server`).
 - Setup `DOCKGE_STACKS_DIR`.
-
-### 2. Update `.env`
-
-- Configure your user and group IDs:
-
-```bash
-id $USER
-```
-
-Use the output values for `PUID` and `PGID`.
-
-- Set your timezone (TZ) using a value from the [TZ database list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## Deployment
 
