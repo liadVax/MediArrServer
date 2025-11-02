@@ -4,6 +4,8 @@
 
 Dockge is a lightweight web-based interface for managing Docker containers and stacks. It serves as your container manager — allowing you to deploy, monitor, and control all your services in one interface.
 
+**Dockge homepage:** [https://dockge.kuma.pet](https://dockge.kuma.pet)
+
 ## Configuration
 
 ### 1. Update `compose.yaml`
