@@ -12,17 +12,17 @@ Quick overview of each service included in this media server stack.
 | ------------ | -------------------------------------------- | :--: | :----: | -------------------------------------------------- |
 | [Dockge](./dockge) | Docker image management interface | `5001` | ✔️ | |
 | [Homepage](./homepage) | Personalized dashboard for server info | `3000` | ✔️ | |
-| [Flaresolverr](./Flaresolverr) | Solves Cloudflare protections for indexers | `8191` | ✔️ | Needed by some indexers |
-| [qBittorrent](./qBittorrent) | Torrent client | `8080` | ✔️ | |
-| [NZBGet](./NZBGet) | Usenet downloader | `6789` | ✔️ | |
-| [Plex](./Plex) | Media server for movies & TV | `32400` | ✔️ | |
-| [Jellyfin](./Jellyfin) | Media server for movies, TV, music | `8096` | ❌ | Dropped it, `Plex` gave me better user experience |
-| [Immich](./Immich) | Personal photo/video backup solution | `2283` | ✔️ | |
-| [Sonarr](./Sonarr) | TV show manager & downloader | `8989`| ✔️ | |
-| [Radarr](./Radarr) | Movie manager & downloader | `7878` | ✔️ | |
-| [Lidarr](./Lidarr) | Music collection manager | `8686` | ✔️ | |
-| [Prowlarr](./Prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
-| [Bazarr](./Bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
+| [Flaresolverr](./flaresolverr) | Solves Cloudflare protections for indexers | `8191` | ✔️ | Needed by some indexers |
+| [qBittorrent](./qbittorrent) | Torrent client | `8080` | ✔️ | |
+| [NZBGet](./nzbget) | Usenet downloader | `6789` | ✔️ | |
+| [Plex](./plex) | Media server for movies & TV | `32400` | ✔️ | |
+| [Jellyfin](./jellyfin) | Media server for movies, TV, music | `8096` | ❌ | Dropped it, `Plex` gave me better user experience |
+| [Immich](./immich) | Personal photo/video backup solution | `2283` | ✔️ | |
+| [Sonarr](./sonarr) | TV show manager & downloader | `8989`| ✔️ | |
+| [Radarr](./radarr) | Movie manager & downloader | `7878` | ✔️ | |
+| [Lidarr](./lidarr) | Music collection manager | `8686` | ✔️ | |
+| [Prowlarr](./prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
+| [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
 
 ### Prerequisites
 
