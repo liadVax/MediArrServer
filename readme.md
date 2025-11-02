@@ -69,33 +69,33 @@ This network allows containers to resolve each other by name and communicate int
 
 1.  Clone this repository:
 
-```
+```bash
 git clone https://github.com/liadVax/MediArrServer.git
 cd media_server
 ```
 
 2. Create custom Docker network:
 
-```
+```bash
 docker network create --driver bridge --subnet 10.10.0.0/24 myservernet
 ```
 
 3. Create data folders at preferred directory:
 
-```
+```bash
 mkdir -p {torrents/{movies,music,tv},usenet/{incomplete,complete/{movies,music,tv}},media/{movies,music,tv}}
 ```
 
 4. Setup data folder permissions:
 
-```
+```bash
 sudo chown -R $USER:$USER /data
 sudo chmod -R a=,a+rX,u+w,g+w /data
 ```
 
 5. Enter each service folder, setup the .env, docker-compose.yaml and then:
 
-```
+```bash
 docker compose up -d
 ```
 
