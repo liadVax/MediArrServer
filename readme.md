@@ -7,21 +7,22 @@ This repository is my complete home media server using *arr stack.
 
 ### Services
 
-| Name         | Description                                  | Port | Status | Notes                                              |
+Quick overview of each service included in this media server stack.
+| Name | Description | Port | Status | Notes |
 | ------------ | -------------------------------------------- | :--: | :----: | -------------------------------------------------- |
-| Dockge       | Docker image management interface            |      |   ✔️   |                                                    |
-| Homepage     | Personalized dashboard for server info       |      |   ✔️   |                                                    |
-| Flaresolverr | Solves Cloudflare protections for indexers   |      |   ✔️   | Needed by some indexers                            |
-| qBittorrent  | Torrent client                               |      |   ✔️   |                                                    |
-| NZBGet       | Usenet downloader                            |      |   ✔️   |                                                    |
-| Plex         | Media server for movies & TV                 |      |   ✔️   |                                                    |
-| Jellyfin     | Media server for movies, TV, music           |      |   ❌   | `Plex` gave me better user experience              |
-| Immich       | Personal photo/video backup solution         |      |   ✔️   |                                                    |
-| Sonarr       | TV show manager & downloader                 |      |   ✔️   |                                                    |
-| Radarr       | Movie manager & downloader                   |      |   ✔️   |                                                    |
-| Lidarr       | Music collection manager                     |      |   ✔️   |                                                    |
-| Prowlarr     | Indexer manager for Sonarr/Radarr/Lidarr     |      |   ✔️   |                                                    |
-| Bazarr       | Subtitles management service for movies & TV |      |   ❌   | Didn't worked properly, Had problem with providers |
+| [Dockge](./dockge) | Docker image management interface | `5001` | ✔️ | |
+| [Homepage](./homepage) | Personalized dashboard for server info | `3000` | ✔️ | |
+| [Flaresolverr](./Flaresolverr) | Solves Cloudflare protections for indexers | `8191` | ✔️ | Needed by some indexers |
+| [qBittorrent](./qBittorrent) | Torrent client | `8080` | ✔️ | |
+| [NZBGet](./NZBGet) | Usenet downloader | `6789` | ✔️ | |
+| [Plex](./Plex) | Media server for movies & TV | `32400` | ✔️ | |
+| [Jellyfin](./Jellyfin) | Media server for movies, TV, music | `8096` | ❌ | Dropped it, `Plex` gave me better user experience |
+| [Immich](./Immich) | Personal photo/video backup solution | `2283` | ✔️ | |
+| [Sonarr](./Sonarr) | TV show manager & downloader | `8989`| ✔️ | |
+| [Radarr](./Radarr) | Movie manager & downloader | `7878` | ✔️ | |
+| [Lidarr](./Lidarr) | Music collection manager | `8686` | ✔️ | |
+| [Prowlarr](./Prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
+| [Bazarr](./Bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
 
 ### Prerequisites
 
@@ -60,40 +61,39 @@ This ensures that when containers create or modify files, they remain accessible
 
 ### Container Bridge Network
 
-When running multiple containers (Radarr, Sonarr, qBittorrent, etc.), they need to communicate directly with each other to exchange data and API calls.  
-By default, Docker Compose creates an isolated network per stack, which prevents cross-communication between services in different Compose files.
-To fix this, I defined a shared custom bridge network: `myservernet - 10.10.0.0/24`
-This network allows containers to resolve each other by name (e.g., `qbittorrent`, `radarr`, `sonarr`) and communicate internally without exposing their ports to the host.
+Docker containers network is isolated by default, which prevents cross-communication between services.
+We'll setup a custom bridge network: `myservernet - 10.10.0.0/24`
+This network allows containers to resolve each other by name and communicate internally without exposing their ports to the host.
 
 ## Getting Started
 
 1.  Clone this repository:
 
 ```
-git clone https://{ENTER URL}.git
+git clone https://github.com/liadVax/MediArrServer.git
 cd media_server
 ```
 
-2. Create the custom Docker network:
+2. Create custom Docker network:
 
 ```
 docker network create --driver bridge --subnet 10.10.0.0/24 myservernet
 ```
 
-3. Create folders at preferred directory:
+3. Create data folders at preferred directory:
 
 ```
 mkdir -p {torrents/{movies,music,tv},usenet/{incomplete,complete/{movies,music,tv}},media/{movies,music,tv}}
 ```
 
-4. Adjust data folder permissions:
+4. Setup data folder permissions:
 
 ```
 sudo chown -R $USER:$USER /data
 sudo chmod -R a=,a+rX,u+w,g+w /data
 ```
 
-5. Enter each service folder, review its .env.example or .env, set your values, then:
+5. Enter each service folder, setup the .env, docker-compose.yaml and then:
 
 ```
 docker compose up -d
