@@ -5,7 +5,7 @@
 This repository is my complete home media server using *arr stack.
 “Lidarr, Prowlarr, Radarr, Readarr, Sonarr, and Whisparr are collectively referred to as "*arr" or "\*arrs". They are designed to automatically grab, sort, organize, and monitor your Music, Movie, E-Book, or TV Show collections for Lidarr, Radarr, Readarr, Sonarr, and Whisparr; and to manage your indexers and keep them in sync with the aforementioned apps for Prowlarr.”
 
-### Services
+## Services
 
 Quick overview of each service included in this media server stack.
 | Name | Description | Port | Status | Notes |
@@ -24,13 +24,13 @@ Quick overview of each service included in this media server stack.
 | [Prowlarr](./prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
 | [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
 
-### Prerequisites
+## Prerequisites
 
 - **Operating System:** Ubuntu 24.04.3
-- **Docker & Docker Compose** installed and configured
-- **Network setup**: devices on same LAN
+- **Docker & Docker Compose** Installed and configured
+- **Network setup**: Devices on same LAN
 
-### File and Folder Structure
+## File and Folder Structure
 
 It is important that your media server has a well-organized file and folder structure. Along with generally easier file and folder management.
 
@@ -54,12 +54,12 @@ data
 
 - For more info https://trash-guides.info/File-and-Folder-Structure
 
-### User Permissions
+## User Permissions
 
 Each container on your media server needs access to media files and configuration folders. Recommend setting up with, folders `775` and files `664`.
 This ensures that when containers create or modify files, they remain accessible to other containers and to your user account without manual intervention.
 
-### Container Bridge Network
+## Container Bridge Network
 
 Docker containers network is isolated by default, which prevents cross-communication between services.
 We'll setup a custom bridge network: `myservernet - 10.10.0.0/24`
