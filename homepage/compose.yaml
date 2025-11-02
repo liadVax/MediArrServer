@@ -13,8 +13,8 @@ services:
       - 3000:3000
     volumes:
       - ./homepage:/app/config
-      - ./homepage/icons:/app/public/icons
-      - /path/to/data:/data # For displaying disks stats
+      - /path/to/icons:/app/public/icons # Optional for displaying icons
+      - /path/to/data:/data # Optional for displaying disks stats
     env_file:
       - .env
     restart: unless-stopped
