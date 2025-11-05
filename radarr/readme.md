@@ -1,10 +1,10 @@
-# Sonarr Setup Guide
+# Radarr Setup Guide
 
 ## Overview
 
-**Sonarr** is a TV shows collection manager for Usenet and BitTorrent users. It automates the downloading, sorting, and renaming of the show, working seamlessly with indexers and download clients.
+**Radarr** is a movie collection manager for Usenet and BitTorrent users. It automates the downloading, sorting, and renaming of movies, working seamlessly with indexers and download clients.
 
-**Sonarr Official Site:** [Sonarr](https://sonarr.tv/)
+**Radarr Official Site:** [Radarr](https://radarr.video/)
 
 ## Configuration
 
@@ -26,7 +26,7 @@ TZ=<your-timezone>      # e.g., Europe/London
 id $USER
 ```
 
-- You can find your `TZ` in: [TZ Database List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+- Find your timezone `TZ`, from the [TZ Database List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## Deployment
 
@@ -36,8 +36,8 @@ id $USER
 docker compose up -d
 ```
 
-2. Access Sonarr in your browser:
+2. Access Radarr in your browser:
 
 ```
-http://<your-server-ip>:8989
+http://<your-server-ip>:7878
 ```
