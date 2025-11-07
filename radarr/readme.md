@@ -50,11 +50,12 @@ http://<your-server-ip>:7878
 
 ## Setup
 
-1. In _Series > Library Import_ Change:
+1. In _Series > Library Import_:
    - Click _Start Import_ Choose `/data/media/movies`
-2. In _Setting > Media Management_ Change:
+2. In _Setting > Media Management_:
    - Enable _Rename Movies_
-3. In _Setting > General_ Change:
+   - Click _Show Advanced_ and Enable _Use Hardlinks instead of Copy_
+3. In _Setting > General_:
    - In _Authentication_ Select `Forms (Login Page)`
    - _Username_ and _Password_ for future logins
 4. In _Setting > Download Clients_:

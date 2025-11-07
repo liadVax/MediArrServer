@@ -1,10 +1,10 @@
-# Sonarr Setup Guide
+# Lidarr Setup Guide
 
 ## Overview
 
-**Sonarr** is a TV shows collection manager for Usenet and BitTorrent users. It automates the downloading, sorting, and renaming of the show, working seamlessly with indexers and download clients.
+**Lidarr** is a music collection manager for Usenet and BitTorrent users. It automatically downloads new albums, and organizes your music library. Lidarr integrates seamlessly with download clients
 
-**Sonarr Official Site:** [Sonarr](https://sonarr.tv/)
+**Lidarr Official Site:** [Lidarr](https://lidarr.audio/)
 
 ## Configuration
 
@@ -26,14 +26,14 @@ TZ=<your-timezone>      # e.g., Europe/London
 id $USER
 ```
 
-- You can find your `TZ` in: [TZ Database List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+- Find your timezone `TZ`, from the [TZ Database List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## Deployment
 
 1. Change to container directory:
 
 ```bash
-cd ~/media_server/sonarr
+cd ~/media_server/lidarr
 ```
 
 2. Run the container:
@@ -42,26 +42,27 @@ cd ~/media_server/sonarr
 docker compose up -d
 ```
 
-3. Access Sonarr in your browser:
+3. Access Lidarr in your browser:
 
 ```
-http://<your-server-ip>:8989
+http://<your-server-ip>:8686
 ```
 
 ## Setup
 
-1. In _Series > Library Import_:
-   - Click _Start Import_ Choose `/data/media/tv`
-2. In _Setting > Media Management_:
-   - Enable _Rename Episodes_
+1. In _Setting > Media Management_:
+   - Add _Root Folder_:
+     - _Name_: `music`
+     - _path_: `/data/media/music`
+   - Enable _Rename Tracks_
    - Click _Show Advanced_ and Enable _Use Hardlinks instead of Copy_
-3. In _Setting > General_:
-   - In _Authentication_ Select `Forms (Login Page)`
-   - _Username_ and _Password_ for future logins
-4. In _Setting > Download Clients_:
+2. In _Setting > Download Clients_:
    - Add _qBittorrent_:
      - _Host_: `qbittorrent` or use your `IP address`
      - qBittorrent _Username_ and _Password_
-     - _Category_: `tv`
+     - _Category_: `movies`
      - Test and Save
    - Add _NZBGet_, Same procedure.
+3. In _Setting > General_ Change:
+   - In _Authentication_ Select `Forms (Login Page)`
+   - _Username_ and _Password_ for future logins

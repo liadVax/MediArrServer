@@ -60,6 +60,7 @@ http://<your-server-ip>:9696
      - _API Key_: In Raddar go to _Setting > General_ copy `API Key`
      - Test and Save
    - Add _Sonnar_, Same procedure.
+   - Add _Lidarr_, Same procedure.
 3. In _Setting > Download Clients_:
    - Add _qBittorrent_:
      - _Host_: `qbittorrent` or use your `IP address`

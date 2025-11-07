@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Plex** is a powerful media server that organizes your movies, TV shows and streams them to any device.  
+**Plex** is a powerful media server that organizes your movies and TV shows and streams them to any device.  
 It integrates seamlessly with \*arr applications (like Radarr, Sonarr, and Lidarr), automatically updating your library when new media is downloaded.
 
 **Plex Official Site:** [Plex](https://www.plex.tv/)
