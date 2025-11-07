@@ -1,5 +1,7 @@
 # Media Server - \*arr Stack
 
+![](./homepage/homepage/icons/MyLogo.png "Mediarr Server"){width=70%}
+
 ## Overview
 
 This repository is my complete home media server using *arr stack.
@@ -23,6 +25,19 @@ Quick overview of each service included in this media server stack.
 | [Lidarr](./lidarr) | Music collection manager | `8686` | ✔️ | |
 | [Prowlarr](./prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
 | [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
+
+## Recommended Setup Order
+
+To ensure a smooth setup and proper inter-service integration, it’s recommended to deploy the containers in the following order:
+
+1. `Dockge`
+2. `Flaresolverr`
+3. `qBittorrent, NZBGet`
+4. `Radarr, Sonarr, Lidarr`
+5. `Prowlarr`
+6. `Plex, Jellyfin`
+7. `Bazarr`
+8. `Homepage`
 
 ## Prerequisites
 
@@ -62,6 +77,19 @@ This ensures that when containers create or modify files, they remain accessible
 ## Hard Links Usage
 
 The server uses hard link to efficiently manage files without duplicating data. By referencing the same file content through multiple paths, we reduce storage usage and improve performance during updates or backups. This approach ensures consistency across linked files while keeping operations lightweight and reliable.
+To verify if a file is hard-linked, you can use:
+
+```bash
+ls -al /path/to/your/download/location/
+```
+
+The output will be list of all files, On the left side the number after the permissions is greater than 1 its hardlinked
+
+```bash
+-rw-r--r-- 2 user user ... 'file 1' ✔️ hardlinked
+-rw-r--r-- 1 user user ... 'file 2' ❌ not hardlinked
+-rw-r--r-- 3 user user ... 'file 3' ✔️ hardlinked
+```
 
 ## Container Bridge Network
 
@@ -104,3 +132,10 @@ docker compose up -d
 ```
 
 6. Access each service via browser using your server’s IP and defined ports.
+
+---
+
+## Helpful Guides and Sources
+
+- https://trash-guides.info
+- https://wiki.servarr.com

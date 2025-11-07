@@ -67,3 +67,5 @@ http://<your-server-ip>:8989
    - In _Default Language Profiles For Newly Added Shows_ Enable Series and Movies with your added profile
 5. In _Setting > Providers_:
    - Add subtitles providers you would like to enable.
+
+- For more info use https://wiki.bazarr.media
