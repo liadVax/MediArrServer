@@ -10,18 +10,24 @@ Dockge is a lightweight web-based interface for managing Docker containers and s
 
 ### 1. Update `compose.yaml`
 
-- Setup `/path/to/stacks`, (I used `/home/user/home_server`).
+- `/path/to/stacks` modify to media server directory, recommend on `/home/user/home_server`.
 - Setup `DOCKGE_STACKS_DIR`.
 
 ## Deployment
 
-Run the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/dockge
+```
+
+2. Run the container:
 
 ```bash
 docker compose up -d
 ```
 
-Access Dockge via your browser:
+3. Access Dockge via your browser:
 
 ```
 http://<your-server-ip>:5001
@@ -29,5 +35,4 @@ http://<your-server-ip>:5001
 
 ## Notes
 
-- Mounting `/var/run/docker.sock` allows Dockge to control Docker directly — handle this with care.
-- To manage services, either create them via the Dockge web UI or move their `compose.yaml` and `.env` files into your configured stack path (`DOCKGE_STACKS_DIR`).
+- To manage services, either create them via the Dockge Web UI or move their `compose.yaml` and `.env` files into your configured stack path (`DOCKGE_STACKS_DIR`).

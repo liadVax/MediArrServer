@@ -17,27 +17,41 @@ Homepage is a web-based dashboard that provides an overview of your media server
 
 ### 2. Update `.env`
 
-- `PUID` & `PGID`, Set your user and group IDs using:
+```
+PUID=<your-user-id>                 # User ID for file ownership
+PGID=<your-group-id>                # Group ID for file ownership
+TZ=<your-timezone>                  # e.g., Europe/London
+HOMEPAGE_ALLOWED_HOSTS=<your-ip>    # 127.0.0.1 or *
+HOMEPAGE_VAR_WEATHER=<you-api-key>  # openweathermap api key
+```
+
+- You can find your `PUID` and `PGID` with:
 
 ```bash
 id $USER
 ```
 
-- `TZ`, Set your timezone using a value from the [TZ database list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+- Find your timezone `TZ`, from the [TZ Database List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
-- `HOMEPAGE_ALLOWED_HOSTS`, Use `*` for LAN access or specify your devices `ip` explicitly.
+- For `HOMEPAGE_ALLOWED_HOSTS` Use `*` for LAN access or specify your devices `ip` explicitly in.
 
-- `HOMEPAGE_VAR_WEATHER` is optional variable to show weather information, i used [openweathermap](https://openweathermap.org).
+- Usage of `HOMEPAGE_VAR_WEATHER` is optional for showing weather information, i used [openweathermap](https://openweathermap.org) API.
 
 ## Deployment
 
-Start the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/homepage
+```
+
+2. Run the container:
 
 ```bash
 docker compose up -d
 ```
 
-Access Homepage in your browser:
+3. Access Homepage in your browser:
 
 ```
 http://<your-server-ip>:3000

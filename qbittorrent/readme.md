@@ -30,19 +30,25 @@ id $USER
 
 ## Deployment
 
-1. Start the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/qBittorrent
+```
+
+2. Run the container:
 
 ```bash
 docker compose up -d
 ```
 
-2. Access qBittorrent in your browser:
+3. Access qBittorrent in your browser:
 
 ```
 http://<your-server-ip>:8080
 ```
 
-3. Login Credentials, In first launch qBittorrent it will generate a random password. You can find it in container logs
+4. Login Credentials, In first launch qBittorrent it will generate a random password. You can find it in container logs:
 
 ```bash
 docker container logs qbittorrent
@@ -50,4 +56,12 @@ docker container logs qbittorrent
 
 ## Setup
 
--- TBD --
+1. In _Setting > Downloads_ Change:
+   - Enable _Delete .torrent files afterward_
+   - Enable _Pre-allocate disk space for all files_
+   - _Default Save Path_: `/data/torrents`
+2. In _Setting > WebUI_ Change:
+   - _Username_ and _Password_ for future logins
+   - _Enable Bypass authentication for clients on local host_
+     Or Enable _whitelisted IP subnet_ and write subnet `10.10.0.0/24` [Container Bridge Network](../README.md#container-bridge-network)
+   - Disable Cross-Site Request Forgery (CSRF) protection.

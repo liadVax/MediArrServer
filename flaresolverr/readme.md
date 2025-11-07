@@ -14,19 +14,20 @@ Flaresolverr is a service that bypasses Cloudflare protections for web scraping 
 
 ## Deployment
 
-Run the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/flaresolverr
+```
+
+2. Run the container:
 
 ```bash
 docker compose up -d
 ```
 
-Access Flaresolverr via your browser:
+3. Access Flaresolverr via your browser:
 
 ```
 http://<your-server-ip>:8191
 ```
-
-## Notes
-
-- Flaresolverr is required for indexers protected by Cloudflare.
-- Make sure your \*arr apps are configured to use Flaresolverr as the proxy for these indexers.

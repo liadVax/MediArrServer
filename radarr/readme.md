@@ -30,14 +30,37 @@ id $USER
 
 ## Deployment
 
-1. Start the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/radarr
+```
+
+2. Run the container:
 
 ```bash
 docker compose up -d
 ```
 
-2. Access Radarr in your browser:
+3. Access Radarr in your browser:
 
 ```
 http://<your-server-ip>:7878
 ```
+
+## Setup
+
+1. In _Series > Library Import_ Change:
+   - Click _Start Import_ Choose `/data/media/movies`
+2. In _Setting > Media Management_ Change:
+   - Enable _Rename Movies_
+3. In _Setting > General_ Change:
+   - In _Authentication_ Select `Forms (Login Page)`
+   - _Username_ and _Password_ for future logins
+4. In _Setting > Download Clients_:
+   - Add _qBittorrent_:
+     - _Host_: `qbittorrent` or use your `IP address`
+     - qBittorrent _Username_ and _Password_
+     - _Category_: `movies`
+     - Test and Save
+   - Add _NZBGet_, Same procedure.

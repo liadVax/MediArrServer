@@ -59,6 +59,10 @@ data
 Each container on your media server needs access to media files and configuration folders. Recommend setting up with, folders `775` and files `664`.
 This ensures that when containers create or modify files, they remain accessible to other containers and to your user account without manual intervention.
 
+## Hard Links Usage
+
+The server uses hard link to efficiently manage files without duplicating data. By referencing the same file content through multiple paths, we reduce storage usage and improve performance during updates or backups. This approach ensures consistency across linked files while keeping operations lightweight and reliable.
+
 ## Container Bridge Network
 
 Docker containers network is isolated by default, which prevents cross-communication between services.

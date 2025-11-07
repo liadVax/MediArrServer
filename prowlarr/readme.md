@@ -26,7 +26,13 @@ id $USER
 
 ## Deployment
 
-1. Start the container:
+1. Change to container directory:
+
+```bash
+cd ~/media_server/prowlarr
+```
+
+1. Run the container:
 
 ```bash
 docker compose up -d
@@ -37,3 +43,34 @@ docker compose up -d
 ```
 http://<your-server-ip>:9696
 ```
+
+## Setup
+
+1. In _Settings > Indexers_:
+   - Add _FlareSolverr_:
+     - _Name_: `FlareSolverr`
+     - _Tags_: `flaresolverr`
+     - _Host_: `http://flaresolverr:8191` or `http://10.10.0.0:8191`
+   - Test and Save
+2. In _Settings > Apps_:
+   - Add _Raddar_:
+     - _Name_: `Radarr`
+     - _Prowlarr Server_: `http://prowlarr:9696`
+     - _Radarr Server_: `http://radarr:7878`
+     - _API Key_: In Raddar go to _Setting > General_ copy `API Key`
+     - Test and Save
+   - Add _Sonnar_, Same procedure.
+3. In _Setting > Download Clients_:
+   - Add _qBittorrent_:
+     - _Host_: `qbittorrent` or use your `IP address`
+     - qBittorrent _Username_ and _Password_
+     - _Default Category_: `prowlarr`
+     - Test and Save
+   - Add _NZBGet_, Same procedure.
+4. In _Setting > General_ Change:
+   - In _Authentication_ Select `Forms (Login Page)`
+   - _Username_ and _Password_ for future logins
+5. In _Indexers_:
+   - Click Add Indexers and select you favorite Torrents/Usent Indexers.
+     - Cloudflare DDoS Protection blocked, add in _Tags_ `flaresolverr`, Verify `Flaresolverr` container running.
+   - Test and Save
