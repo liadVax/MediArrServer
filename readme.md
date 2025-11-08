@@ -1,6 +1,6 @@
 # Media Server - \*arr Stack
 
-![](./homepage/homepage/icons/MyLogo.png "Mediarr Server"){width=70%}
+<img src="./homepage/homepage/icons/MyLogo.png" width="65%">
 
 ## Overview
 
