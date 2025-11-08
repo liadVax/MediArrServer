@@ -56,11 +56,12 @@ docker container logs qbittorrent
 
 ## Setup
 
-1. In _Setting > Downloads_ Change:
+1. In _Setting > Downloads_:
    - Enable _Delete .torrent files afterward_
    - Enable _Pre-allocate disk space for all files_
    - _Default Save Path_: `/data/torrents`
-2. In _Setting > WebUI_ Change:
+   - (Optional) Enable _Excluded file names_ and add from [List](./blacklist.txt)
+2. In _Setting > WebUI_:
    - _Username_ and _Password_ for future logins
    - _Enable Bypass authentication for clients on local host_
      Or Enable _whitelisted IP subnet_ and write subnet `10.10.0.0/24` [Container Bridge Network](../README.md#container-bridge-network)
