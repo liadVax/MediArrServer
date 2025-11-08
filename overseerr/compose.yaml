@@ -1,0 +1,18 @@
+services:
+  overseerr:
+    image: lscr.io/linuxserver/overseerr:latest
+    container_name: overseerr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ./overseerr:/config
+    ports:
+      - 5055:5055
+    restart: unless-stopped
+    networks:
+      - myservernet
+networks:
+  myservernet:
+    external: true
