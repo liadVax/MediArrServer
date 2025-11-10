@@ -1,0 +1,13 @@
+# IMPORTANT - If Glances page doesn’t load the first time, allow Glances through firewall. sudo ufw allow 32400
+services:
+  monitoring:
+    container_name: glances
+    image: nicolargo/glances:latest-full
+    pid: host
+    ports:
+      - 61208:61208
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - GLANCES_OPT=-w

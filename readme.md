@@ -11,7 +11,7 @@ This repository is my complete home media server using *arr stack.
 
 Quick overview of each service included in this media server stack.
 | Name | Description | Port | Status | Notes |
-| ------------ | -------------------------------------------- | :--: | :----: | -------------------------------------------------- |
+| -----| ----------- | :--: | :----: | ----- |
 | [Dockge](./dockge) | Docker image management interface | `5001` | ✔️ | |
 | [Homepage](./homepage) | Personalized dashboard for server info | `3000` | ✔️ | |
 | [Flaresolverr](./flaresolverr) | Solves Cloudflare protections for indexers | `8191` | ✔️ | Needed by some indexers |
@@ -24,20 +24,26 @@ Quick overview of each service included in this media server stack.
 | [Radarr](./radarr) | Movie manager & downloader | `7878` | ✔️ | |
 | [Lidarr](./lidarr) | Music collection manager | `8686` | ✔️ | |
 | [Prowlarr](./prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
-| [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problem with providers |
+| [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problems with subtitle providers |
+| [Profilarr](./profilarr) | Configuration management tool for Radarr/Sonar | `6868` | ✔️ | (Optional) For easy import custom formats and quality profiles|
+| [Overseerr](./overseerr) | Request management and media discovery tool | `5055` | ✔️ | |
+| [Glances](./glances) | Real-time monitoring tool | `61208` | ✔️ | |
 
 ## Recommended Setup Order
 
 To ensure a smooth setup and proper inter-service integration, it’s recommended to deploy the containers in the following order:
 
 1. `Dockge`
-2. `Flaresolverr`
-3. `qBittorrent, NZBGet`
-4. `Radarr, Sonarr, Lidarr`
-5. `Prowlarr`
-6. `Plex, Jellyfin`
-7. `Bazarr`
-8. `Homepage`
+1. `Flaresolverr`
+1. `Glances`
+1. `qBittorrent, NZBGet`
+1. `Radarr, Sonarr, Lidarr`
+1. `Prowlarr`
+1. `Plex, Jellyfin`
+1. `Profilarr`
+1. `Bazarr`
+1. `Overseerr`
+1. `Homepage`
 
 ## Prerequisites
 
