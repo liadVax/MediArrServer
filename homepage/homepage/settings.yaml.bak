@@ -6,7 +6,7 @@ title: Bell's
 language: en
 theme: dark
 color: neutral
-target: _blank 
+target: _self
 headerStyle: boxed
 statusStyle: "dot"
 hideVersion: true
@@ -38,14 +38,6 @@ layout:
       columns: 2
       icon: mdi-file-multiple
   - Downloader:
-      style: row
-      columns: 2
       icon: mdi-share-all
   - Utils:
       icon: mdi-tools
-      style: row
-      columns: 2
-  - Monitor:
-      icon: mdi-monitor-eye
-      style: row
-      columns: 2

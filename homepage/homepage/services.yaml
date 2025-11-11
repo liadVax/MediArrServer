@@ -2,12 +2,18 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
+
 - Media:
     - Plex:
         icon: plex.svg
         href: http://a.b.c.d:32400
         description: Media streaming server
         # siteMonitor: http://plex:8096
+    - Overseerr:
+        icon: overseerr.svg
+        href: http://a.b.c.d:5055
+        description: Request management and media discovery tool
+        # siteMonitor: http://immich:2283
     - Jellyfin:
         icon: jellyfin.svg
         href: http://a.b.c.d:8096
@@ -75,3 +81,38 @@
         href: http://a.b.c.d:8191
         description: Bypass cloudflare and DDoS-GUARD
         # siteMonitor: http://flaresolverr:8191
+    - Profilarr:
+        icon: profilarr.svg
+        href: http://a.b.c.d:6868
+        description: Configuration management tool for Radarr/Sonar
+    - Glances :
+        icon: glances.svg
+        href: http://a.b.c.d:61208
+        description: real-time monitoring tool
+
+- Monitor:
+    - System:
+        widget:
+            type: glances
+            version: 4
+            url: http://a.b.c.d:61208
+            metric: info
+    - CPU:
+        widget:
+            type: glances
+            version: 4
+            url: http://a.b.c.d:61208
+            metric: cpu
+    - Network :
+        widget:
+            type: glances
+            version: 4
+            url: http://a.b.c.d:61208
+            metric: network:NET_NAME
+    - Memory :
+        widget:
+            type: glances
+            version: 4
+            url: http://a.b.c.d:61208
+            metric: memory
+            
