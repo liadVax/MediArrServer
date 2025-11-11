@@ -1,4 +1,4 @@
-# IMPORTANT - If Glances page doesn’t load the first time, allow Glances through firewall. sudo ufw allow 32400
+# IMPORTANT - If Glances page doesn’t load, allow Glances through firewall. sudo ufw allow 32400
 services:
   monitoring:
     container_name: glances

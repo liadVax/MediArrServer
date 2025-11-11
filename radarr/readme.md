@@ -65,3 +65,8 @@ http://<your-server-ip>:7878
      - _Category_: `movies`
      - Test and Save
    - Add _NZBGet_, Same procedure.
+5. In _Setting > Profiles_:
+   - Select the profile that you want to use/prefer
+   - For custom Quality Profiles you can use:
+     - [TRaSh-Guide](https://trash-guides.info/Radarr/radarr-setup-quality-profiles)
+     - [Profilarr](../profilarr)

@@ -26,7 +26,7 @@ Quick overview of each service included in this media server stack.
 | [Prowlarr](./prowlarr) | Indexer manager for Sonarr/Radarr/Lidarr | `9696` | ✔️ | |
 | [Bazarr](./bazarr) | Subtitles management service for movies & TV | `6767` | ❌ | Didn't worked properly, Had problems with subtitle providers |
 | [Profilarr](./profilarr) | Configuration management tool for Radarr/Sonar | `6868` | ✔️ | (Optional) For easy import custom formats and quality profiles|
-| [Overseerr](./overseerr) | Request management and media discovery tool | `5055` | ✔️ | |
+| [Overseerr](./overseerr) | Request management and media discovery tool | `5055` | ✔️ | Only integrates with `Plex` |
 | [Glances](./glances) | Real-time monitoring tool | `61208` | ✔️ | |
 
 ## Recommended Setup Order

@@ -60,7 +60,7 @@ http://<your-server-ip>:32400/web
 
 ## Notes
 
-- If Plex page doesn’t load the first time, allow Plex through firewall.
+- If Plex page doesn’t load, allow Plex port through firewall.
 
 ```bash
  sudo ufw allow 32400

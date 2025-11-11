@@ -53,13 +53,13 @@ http://<your-server-ip>:9696
      - _Host_: `http://flaresolverr:8191` or `http://10.10.0.0:8191`
    - Test and Save
 2. In _Settings > Apps_:
-   - Add _Raddar_:
+   - Add _Radarr_:
      - _Name_: `Radarr`
      - _Prowlarr Server_: `http://prowlarr:9696`
      - _Radarr Server_: `http://radarr:7878`
-     - _API Key_: In Raddar go to _Setting > General_ copy `API Key`
+     - _API Key_: In Radarr go to _Setting > General_ copy `API Key`
      - Test and Save
-   - Add _Sonnar_, Same procedure.
+   - Add _Sonarr_, Same procedure.
    - Add _Lidarr_, Same procedure.
 3. In _Setting > Download Clients_:
    - Add _qBittorrent_:

@@ -65,3 +65,8 @@ http://<your-server-ip>:8989
      - _Category_: `tv`
      - Test and Save
    - Add _NZBGet_, Same procedure.
+5. In _Setting > Profiles_:
+   - Select the profile that you want to use/prefer
+   - For custom Quality Profiles you can use:
+     - [TRaSh-Guide](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles)
+     - [Profilarr](../profilarr)
