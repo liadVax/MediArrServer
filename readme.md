@@ -29,6 +29,28 @@ Quick overview of each service included in this media server stack.
 | [Overseerr](./overseerr) | Request management and media discovery tool | `5055` | ✔️ | Only integrates with `Plex` |
 | [Glances](./glances) | Real-time monitoring tool | `61208` | ✔️ | |
 
+## How It Works
+
+Once all services are set up, your media server ecosystem works together to automate everything - from discovering new content to downloading, organizing, and streaming it.
+
+### Example Flow
+
+1. **Requests** a movie or TV show using `Overseerr`.
+   - Overseerr connects to `Radarr` (for movies) or `Sonarr` (for TV).
+2. **Indexer Search**
+   - `Prowlarr` manages indexers and sends search requests to torrent or Usenet sources.
+3. **Download**
+   - Downloads are sent to either `qBittorrent` for torrents or `NZBGet` for Usenet
+4. **Post-Processing**
+   - Once downloaded, `Radarr/Sonarr/Lidarr` import and rename files into your media library.
+5. **Subtitles**
+   - `Bazarr` automatically searches for and downloads subtitles for the new content.
+6. **Media Server Update**
+   - `Plex` or `Jellyfin` automatically detect new files and update your library.
+7. **Optional Monitoring**
+   - Use `Glances` or `Homepage` to monitor system performance and access all service dashboards.
+   - `Dockge` can be used to manage or restart containers easily.
+
 ## Recommended Setup Order
 
 To ensure a smooth setup and proper inter-service integration, it’s recommended to deploy the containers in the following order:
