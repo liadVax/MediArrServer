@@ -1,6 +1,6 @@
 # Media Server - \*arr Stack
 
-<img src="./homepage/homepage/icons/MyLogo.png" width="65%">
+<img src="./homepage/homepage/icons/MyLogo.png" width="400" width="400">
 
 ## Overview
 

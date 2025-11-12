@@ -1,6 +1,6 @@
 # Plex Setup Guide
 
-![](https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg "Logo")
+<img src="https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg" width="256" height="128">
 
 ## Overview
 

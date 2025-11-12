@@ -1,6 +1,8 @@
 # Jellyfin Setup Guide
 
-![](https://raw.githubusercontent.com/jellyfin/jellyfin/1da67e5e10fea9f3bca66e4f510db25f1b4fcd80/Jellyfin.Server/wwwroot/api-docs/banner-dark.svg "Logo")
+![]("Logo")
+
+<img src="https://raw.githubusercontent.com/jellyfin/jellyfin/1da67e5e10fea9f3bca66e4f510db25f1b4fcd80/Jellyfin.Server/wwwroot/api-docs/banner-dark.svg" width="256" height="128">
 
 ## Overview
 

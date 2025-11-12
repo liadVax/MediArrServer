@@ -1,6 +1,6 @@
 # Glances Setup Guide
 
-![](https://raw.githubusercontent.com/nicolargo/glances/c4f6c04eb40c41f050bfce4ecb63308ea49d838b/docs/_static/Glances%20Logo.svg "Logo")
+<img src="https://raw.githubusercontent.com/nicolargo/glances/c4f6c04eb40c41f050bfce4ecb63308ea49d838b/docs/_static/Glances%20Logo.svg" width="128" height="128">
 
 ## Overview
 

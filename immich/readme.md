@@ -1,6 +1,6 @@
 # Immich Setup Guide
 
-![](https://raw.githubusercontent.com/immich-app/immich/4c9142308f3beeb86f898509e3502ebf40b05339/design/immich-logo.svg "Logo")
+<img src="https://raw.githubusercontent.com/immich-app/immich/4c9142308f3beeb86f898509e3502ebf40b05339/design/immich-logo.svg " width="128" height="128">
 
 ## Overview
 
