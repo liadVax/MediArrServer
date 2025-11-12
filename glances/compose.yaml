@@ -1,4 +1,5 @@
-# IMPORTANT - If Glances page doesn’t load, allow Glances through firewall. sudo ufw allow 32400
+# Glances is an open-source system cross-platform monitoring tool.
+# IMPORTANT - If Glances page doesn’t load, allow Glances through firewall. sudo ufw allow 61208
 services:
   monitoring:
     container_name: glances

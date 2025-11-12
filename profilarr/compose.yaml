@@ -1,3 +1,5 @@
+# Profilarr Configuration management tool that automates importing quality profiles.
+# https://hub.docker.com/r/santiagosayshey/profilarr
 services:
   profilarr:
     image: santiagosayshey/profilarr:latest

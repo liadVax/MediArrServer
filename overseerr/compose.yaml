@@ -1,3 +1,5 @@
+# Overseerr is a request management and media discovery tool
+# https://hub.docker.com/r/linuxserver/overseerr
 services:
   overseerr:
     image: lscr.io/linuxserver/overseerr:latest
