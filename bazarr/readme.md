@@ -1,5 +1,7 @@
 # Bazarr Setup Guide
 
+![](https://github.com/morpheus65535/bazarr/blob/master/frontend/public/images/logo128.png?raw=true "Logo")
+
 ## Overview
 
 **Bazarr** is a companion application for Sonarr and Radarr that automatically downloads and manages subtitles for your movies and TV shows.  

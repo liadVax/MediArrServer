@@ -4,7 +4,7 @@
 
 **Profilarr** is a management tool designed to synchronize quality profiles, custom formats, and other configuration settings across multiple \*arr applications. It saves time and reducing manual setup.
 
-**Profilarr Official Site:** [Profilarr](https://github.com/voltron2000/profilarr)
+**Profilarr Official Site:** [Profilarr](https://github.com/Dictionarry-Hub/profilarr)
 
 ---
 

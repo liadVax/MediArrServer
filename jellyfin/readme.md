@@ -1,5 +1,7 @@
 # Jellyfin Setup Guide
 
+![](https://raw.githubusercontent.com/jellyfin/jellyfin/1da67e5e10fea9f3bca66e4f510db25f1b4fcd80/Jellyfin.Server/wwwroot/api-docs/banner-dark.svg "Logo")
+
 ## Overview
 
 **Jellyfin** is a free and open-source media server that allows you to organize, manage, and stream your movies and TV shows to any device.  

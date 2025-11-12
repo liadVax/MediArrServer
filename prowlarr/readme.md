@@ -1,5 +1,7 @@
 # Prowlarr Setup Guide
 
+![](https://github.com/Prowlarr/Prowlarr/blob/develop/Logo/128.png?raw=true "Logo")
+
 ## Overview
 
 **Prowlarr** is the indexer manager for the *arr ecosystem — it connects your *arr applications (Sonarr, Radarr, Lidarr, etc.) to multiple indexers and manages them.

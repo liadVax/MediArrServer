@@ -1,5 +1,7 @@
 # Dockge Setup Guide
 
+![](https://github.com/louislam/dockge/blob/master/frontend/public/icon-192x192.png?raw=true "Logo")
+
 ## Overview
 
 Dockge is a lightweight web-based interface for managing Docker containers and stacks. It serves as your container manager — allowing you to deploy, monitor, and control all your services in one interface.

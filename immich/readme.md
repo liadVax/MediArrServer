@@ -1,5 +1,7 @@
 # Immich Setup Guide
 
+![](https://raw.githubusercontent.com/immich-app/immich/4c9142308f3beeb86f898509e3502ebf40b05339/design/immich-logo.svg "Logo")
+
 ## Overview
 
 **Immich** is a self-hosted photo and video backup solution designed for mobile and web platforms.  

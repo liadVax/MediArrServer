@@ -1,5 +1,7 @@
 # Overseerr Setup Guide
 
+![](https://raw.githubusercontent.com/sct/overseerr/5ef098f6d844dde6d5d9076c8814e9a34bd73451/public/os_icon.svg "Logo")
+
 ## Overview
 
 **Overseerr** is a request management and media discovery tool it allows users to request movies and TV shows for your media server.

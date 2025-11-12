@@ -1,5 +1,7 @@
 # Sonarr Setup Guide
 
+![](https://github.com/Sonarr/Sonarr/blob/v5-develop/Logo/128.png?raw=true "Logo")
+
 ## Overview
 
 **Sonarr** is a TV shows collection manager for Usenet and BitTorrent users. It automates the downloading, sorting, and renaming of the show, working seamlessly with indexers and download clients.

@@ -1,5 +1,7 @@
 # Plex Setup Guide
 
+![](https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg "Logo")
+
 ## Overview
 
 **Plex** is a powerful media server that organizes your movies and TV shows and streams them to any device.  

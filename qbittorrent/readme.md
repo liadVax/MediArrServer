@@ -1,5 +1,7 @@
 # qBittorrent Setup Guide
 
+![](https://www.qbittorrent.org/img/qb_banner.webp "Logo")
+
 ## Overview
 
 **qBittorrent** is a powerful, open-source BitTorrent client that provides a clean web interface and advanced features such as category-based organization, automated RSS downloads, and integration with \*arr applications (like Radarr and Sonarr).

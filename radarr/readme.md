@@ -1,5 +1,7 @@
 # Radarr Setup Guide
 
+![](https://github.com/Radarr/Radarr/blob/develop/Logo/128.png?raw=true "Logo")
+
 ## Overview
 
 **Radarr** is a movie collection manager for Usenet and BitTorrent users. It automates the downloading, sorting, and renaming of movies, working seamlessly with indexers and download clients.

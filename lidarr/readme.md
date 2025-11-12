@@ -1,5 +1,7 @@
 # Lidarr Setup Guide
 
+![](https://github.com/Lidarr/Lidarr/blob/develop/Logo/128.png?raw=true "Logo")
+
 ## Overview
 
 **Lidarr** is a music collection manager for Usenet and BitTorrent users. It automatically downloads new albums, and organizes your music library. Lidarr integrates seamlessly with download clients

@@ -1,5 +1,7 @@
 # NZBGet Setup Guide
 
+![](https://github.com/nzbget/nzbget/blob/develop/webui/img/favicon-256x256.png?raw=true "Logo")
+
 ## Overview
 
 **NZBGet** is a lightweight and efficient Usenet downloader optimized for performance and automation.  

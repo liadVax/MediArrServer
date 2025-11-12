@@ -1,5 +1,7 @@
 # Flaresolverr Setup Guide
 
+![](https://github.com/FlareSolverr/FlareSolverr/blob/master/resources/flaresolverr_logo.png?raw=true "Logo")
+
 ## Overview
 
 **Flaresolverr** is a service that bypasses Cloudflare protections for web scraping or indexer requests. Many \*arr applications (Sonarr, Radarr, Lidarr, etc.) rely on Flaresolverr to access sites that use Cloudflare anti-bot protections.
