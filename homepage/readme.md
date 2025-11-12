@@ -1,12 +1,14 @@
 # Homepage Setup Guide
 
+![](https://github.com/gethomepage/homepage/blob/dev/public/mstile-144x144.png?raw=true "Logo")
+
 ## Overview
 
 Homepage is a web-based dashboard that provides an overview of your media server: showing system stats, disks, connected services, weather, and shortcuts to your containers. It's highly customizable and serves as a dashboard for monitoring your server.
 
-**Official Homepage:** [Homepage](https://gethomepage.dev/)
-
 ![](./myHomepage.png "My Homepage")
+
+**Official Homepage:** [Homepage](https://gethomepage.dev/)
 
 ## Configuration
 
